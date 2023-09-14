@@ -77,13 +77,34 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        int[] zufallsZahl = new int [50];
-       for(int i = 0;i < 50 ;i++)
-       {
-        zufallsZahl[i] = ((int) (Math.random()*100+1));
-            System.out.println(Integer.toString(zufallsZahl[i]));
-       }
-       
+//        int[] zufallsZahl = new int [50];
+//       for(int i = 0;i < 50 ;i++)
+//       {
+//        zufallsZahl[i] = ((int) (Math.random()*100+1));
+//            System.out.println(Integer.toString(zufallsZahl[i]));
+//       }
+
+   int index =  Integer.parseInt(jTextField1.getText()); 
+   int zahl3 =  Integer.parseInt(jTextField2.getText());
+
+//    int[] array = zufallsZahl.clone();
+//    zufallsZahl = new int[zufallsZahl.length + 1];
+
+     index = 3;
+     zahl3 = 2;
+     
+     int[] upu = {1,1,1,1,1};
+    
+    for(int i = 1;i < index;i++)
+    {
+     int value = upu[upu.length - 1 - i];
+     upu[upu.length - i + 1] = value;
+    }
+    
+    for(int i = 0;i < upu.length;i++)
+    {
+     System.out.println(Integer.toString(upu[i]));
+    }
        
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -126,6 +147,7 @@ public class NewJFrame extends javax.swing.JFrame {
         });
     }
 
+    int[] zufallsZahl = new int[50];
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JTextField jTextField1;
